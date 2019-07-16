@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>AQUA</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="styles.37a550b3135b61b5d571.css"></head>
+
+<style>
+  :root {
+    --primary: #00A8c6;
+    --primaryBackdrop: #00bcd47a;
+    --primaryTextColor: #ffffff;
+
+    --accent: rgba(68, 76, 111);
+    --accentBackground: rgba(68, 76, 111, 0.5);
+    --accentTextColor: #002147;
+
+    --secondary: #515151;
+    --secondaryBackground: #bfbdbd;
+
+    --disabled: #bfbdbd;
+    --disabledBackground: #bfbdbd;
+    --warn: #ff6666;
+    --default: #515151;
+    --defaultBackdrop: #999999;
+    --defaultBackground: #f1f1f1;
+  }
+
+  .powered-by {
+    text-align: center;
+    color: var(--default);
+  }
+
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../../../assets/images/login/bg.png) no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+  }
+
+  .starting {
+    position: fixed;
+    /* width: 100%; */
+    right: 0;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    /* background-color: rgba(14, 46, 71, 0.8) !important; */
+    overflow-y: auto;
+  }
+
+  .cssload-box-loading {
+    width: 47px;
+    height: 47px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .cssload-box-loading:before {
+    content: '';
+    width: 47px;
+    height: 5px;
+    background: rgb(10, 0, 10);
+    opacity: 0.1;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow 0.65s linear infinite;
+    -o-animation: shadow 0.65s linear infinite;
+    -ms-animation: shadow 0.65s linear infinite;
+    -webkit-animation: shadow 0.65s linear infinite;
+    -moz-animation: shadow 0.65s linear infinite;
+  }
+
+  .cssload-box-loading:after {
+    content: '';
+    width: 47px;
+    height: 47px;
+    background: rgb(0, 168, 198);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    animation: cssload-animate 0.65s linear infinite;
+    -o-animation: cssload-animate 0.65s linear infinite;
+    -ms-animation: cssload-animate 0.65s linear infinite;
+    -webkit-animation: cssload-animate 0.65s linear infinite;
+    -moz-animation: cssload-animate 0.65s linear infinite;
+  }
+
+  @keyframes cssload-animate {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+
+    25% {
+      transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+      transform: translateY(17px) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 38px;
+    }
+
+    75% {
+      transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @-o-keyframes cssload-animate {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+
+    25% {
+      -o-transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+      -o-transform: translateY(17px) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 38px;
+    }
+
+    75% {
+      -o-transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+      -o-transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @-ms-keyframes cssload-animate {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+
+    25% {
+      -ms-transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+      -ms-transform: translateY(17px) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 38px;
+    }
+
+    75% {
+      -ms-transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+      -ms-transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @-webkit-keyframes cssload-animate {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+
+    25% {
+      -webkit-transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+      -webkit-transform: translateY(17px) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 38px;
+    }
+
+    75% {
+      -webkit-transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+      -webkit-transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @-moz-keyframes cssload-animate {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+
+    25% {
+      -moz-transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+      -moz-transform: translateY(17px) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 38px;
+    }
+
+    75% {
+      -moz-transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+      -moz-transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  @keyframes shadow {
+
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+
+    50% {
+      transform: scale(1.2, 1);
+    }
+  }
+
+  @-o-keyframes shadow {
+
+    0%,
+    100% {
+      -o-transform: scale(1, 1);
+    }
+
+    50% {
+      -o-transform: scale(1.2, 1);
+    }
+  }
+
+  @-ms-keyframes shadow {
+
+    0%,
+    100% {
+      -ms-transform: scale(1, 1);
+    }
+
+    50% {
+      -ms-transform: scale(1.2, 1);
+    }
+  }
+
+  @-webkit-keyframes shadow {
+
+    0%,
+    100% {
+      -webkit-transform: scale(1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale(1.2, 1);
+    }
+  }
+
+  @-moz-keyframes shadow {
+
+    0%,
+    100% {
+      -moz-transform: scale(1, 1);
+    }
+
+    50% {
+      -moz-transform: scale(1.2, 1);
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <app-root>
+      <div class="row starting">
+        <br>
+        <br>
+        <div style="text-align: center;">
+          <img src="assets/images/splash_logo2.png">
+          <!--<img src="assets/images/loading.gif">-->
+        </div>
+        <div class="cssload-box-loading"></div>
+        <br>
+        <div style="text-align: center;color:white">
+          Loading..
+        </div>
+
+      </div>
+    </app-root>
+  </div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85934219-6', 'auto');
+        // ga('create', 'UA-85934219-6', 'none'); // 'none' while you are working on localhost
+        // ga('send', 'pageview');
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/javascript" src="runtime.6d92c3caa4ad9c2dffbf.js"></script><script type="text/javascript" src="es2015-polyfills.923637a8e6d276e6f6df.js" nomodule></script><script type="text/javascript" src="polyfills.f34fe4877261effac2a6.js"></script><script type="text/javascript" src="scripts.74a5c4e786eb7247d65b.js"></script><script type="text/javascript" src="main.2ce38d05c8e10d993411.js"></script></body>
+
+</html>
