@@ -9,8 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="styles.37a550b3135b61b5d571.css"></head>
+  <link rel="stylesheet" href="styles.bbe7e8771fc1ea000a76.css">
+</head>
 
 <style>
   :root {
@@ -21,10 +23,8 @@
     --accent: rgba(68, 76, 111);
     --accentBackground: rgba(68, 76, 111, 0.5);
     --accentTextColor: #002147;
-
     --secondary: #515151;
     --secondaryBackground: #bfbdbd;
-
     --disabled: #bfbdbd;
     --disabledBackground: #bfbdbd;
     --warn: #ff6666;
@@ -304,6 +304,16 @@
     </app-root>
   </div>
   <script>
+
+    (function () {
+      var t = window.localStorage.getItem('tenant');
+
+      if (!t) {
+        return
+      }
+      t = JSON.parse(t);
+      document.getElementById('tenant-logo').src = t.logo.url
+    })();
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
       i[r] = i[r] || function () {
@@ -320,7 +330,11 @@
         // ga('create', 'UA-85934219-6', 'none'); // 'none' while you are working on localhost
         // ga('send', 'pageview');
   </script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script type="text/javascript" src="runtime.6d92c3caa4ad9c2dffbf.js"></script><script type="text/javascript" src="es2015-polyfills.923637a8e6d276e6f6df.js" nomodule></script><script type="text/javascript" src="polyfills.f34fe4877261effac2a6.js"></script><script type="text/javascript" src="scripts.74a5c4e786eb7247d65b.js"></script><script type="text/javascript" src="main.2ce38d05c8e10d993411.js"></script></body>
+  <script type="text/javascript" src="runtime.d5443b5a8eb6ee11c693.js"></script>
+  <script type="text/javascript" src="es2015-polyfills.b9aa21ca98bee2bd9415.js" nomodule></script>
+  <script type="text/javascript" src="polyfills.8cb59f867a04f11d6425.js"></script>
+  <script type="text/javascript" src="scripts.74a5c4e786eb7247d65b.js"></script>
+  <script type="text/javascript" src="main.e6188bcd42a2a61c9258.js"></script>
+</body>
 
 </html>
